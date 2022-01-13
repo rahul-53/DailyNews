@@ -12,7 +12,7 @@ class NewsRepository(val db:ArticleDatabase ) {
     suspend fun getBreakingNews(countryCode:String, page:Int) =
         Network.newsApi.getBreakingNews(countryCode,page)
 
-    suspend fun getSearchedNews(searchQuery: String, pageNumber:Int) =
+    suspend fun searchForNews(searchQuery: String, pageNumber:Int) =
         Network.newsApi.getSearchedNews(searchQuery, pageNumber)
 
 }

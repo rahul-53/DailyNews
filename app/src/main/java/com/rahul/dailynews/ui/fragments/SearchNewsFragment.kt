@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rahul.dailynews.R
 import com.rahul.dailynews.adapters.NewsAdapter
@@ -27,6 +26,7 @@ class SearchNewsFragment : Fragment() {
 
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter:NewsAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,7 +39,6 @@ class SearchNewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as NewsActivity).viewModel
         setRecyclerView()
-        //onItemClick()
 
         var job: Job?=null
         etSearch.addTextChangedListener{editable->
@@ -48,7 +47,7 @@ class SearchNewsFragment : Fragment() {
                 delay(500L)
                 editable?.let {
                     if (editable.toString().isNotEmpty())
-                        viewModel.searchNews(editable.toString())
+                        viewModel.getSearchedNews(editable.toString())
                 }
             }
         }
@@ -75,7 +74,6 @@ class SearchNewsFragment : Fragment() {
                 }
             }
         })
-
     }
 
     private fun hideProgressbar() {
@@ -91,9 +89,8 @@ class SearchNewsFragment : Fragment() {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
         }
-
     }
-  /*  private fun onItemClick(){
+   /* private fun onItemClick(){
         newsAdapter.setOnItemClickListener {
             val bundle =Bundle().apply {
                 putSerializable("article",it)
@@ -103,6 +100,4 @@ class SearchNewsFragment : Fragment() {
             )
         }
     }*/
-
-
 }

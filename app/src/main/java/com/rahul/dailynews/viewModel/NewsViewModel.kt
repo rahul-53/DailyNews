@@ -20,6 +20,7 @@ class NewsViewModel(private val newsRepository: NewsRepository):ViewModel() {
     init {
 
         getBreakingNews("us")
+
     }
 
     fun getBreakingNews(countryCode:String) = viewModelScope.launch {
@@ -28,9 +29,10 @@ class NewsViewModel(private val newsRepository: NewsRepository):ViewModel() {
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
 
-    fun searchNews(searchQuery:String) = viewModelScope.launch {
+    fun getSearchedNews(searchQuery:String) = viewModelScope.launch {
         searchNews.postValue(Resource.Loading())
-        val response = newsRepository.getSearchedNews(searchQuery,searchNewsPage)
+        val response = newsRepository.searchForNews(searchQuery,searchNewsPage)
+        searchNews.postValue(handleSearchedNewsResponse(response))
     }
 
     private fun handleBreakingNewsResponse(response: Response<NewsResponse>):Resource<NewsResponse>{

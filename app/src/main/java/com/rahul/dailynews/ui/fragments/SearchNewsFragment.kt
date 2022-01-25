@@ -47,7 +47,7 @@ class SearchNewsFragment : Fragment() {
                 delay(500L)
                 editable?.let {
                     if (editable.toString().isNotEmpty())
-                        viewModel.getSearchedNews(editable.toString())
+                        viewModel.searchAllNews(editable.toString())
                 }
             }
         }

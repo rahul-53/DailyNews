@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DailyNews/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14722222222222223" />
         <entry key="..\:/DailyNews/app/src/main/res/drawable/horizontal_line.xml" value="0.16296296296296298" />
+        <entry key="..\:/DailyNews/app/src/main/res/drawable/ic_baseline_save_alt_24.xml" value="0.14722222222222223" />
+        <entry key="..\:/DailyNews/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.14722222222222223" />
+        <entry key="..\:/DailyNews/app/src/main/res/drawable/ic_baseline_text_snippet_24.xml" value="0.14722222222222223" />
+        <entry key="..\:/DailyNews/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14722222222222223" />
         <entry key="..\:/DailyNews/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
         <entry key="..\:/DailyNews/app/src/main/res/layout/activity_news.xml" value="0.1" />
         <entry key="..\:/DailyNews/app/src/main/res/layout/article_preview_item.xml" value="0.1" />

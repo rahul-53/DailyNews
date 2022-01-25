@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="#001A33"
         android:text="BREAKING NEWS"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/tvBreakingNews"
